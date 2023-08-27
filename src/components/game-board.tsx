@@ -148,47 +148,4 @@ function calculateStatus({ winner, squares, nextValue }: CalculateStatusType) {
     : `Next player: ${nextValue}`
 }
 
-/**
- * 
-.game{
-  display:flex;
-  height: 100vh ;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.square{
-  background: rgb(132, 129, 129);
-  border:1px solid black;
-  height: 70px;
-  width: 70px;
-  font-size: 50px;
-  font-weight: bold;
-  margin-right: -1px;
-  margin-top: -1px;
-  float: left;
-  cursor: pointer;
-}
-.status{
-  font-size: 24px;
-  color: rgb(254, 200, 200);
-  margin-bottom: 10px;
-}
-
-.restart{
-  border-radius: 25px;
-  border: 1px solid black;
-  font-size:24px;
-  padding:10px;
-  margin-top: 20px;
-  margin-left: 20px;
-  background: rgb(172, 63, 172);
-  cursor: pointer;
-}
-
-
- */
-
 export default Board

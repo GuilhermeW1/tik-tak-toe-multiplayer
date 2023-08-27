@@ -16,8 +16,6 @@ function Home() {
   const [joinRoom, setJoinRoom] = React.useState('')
   const history = useNavigate()
 
-  console.log(rooms)
-
   async function handleCreateRoom(event: React.FormEvent) {
     event.preventDefault()
 
@@ -47,16 +45,19 @@ function Home() {
     <>
       <Header user={user} logout={logout} />
       <div className="flex flex-row items-center justify-evenly  h-screen p-10 bg-slate-50">
-        <aside className="w-1/2 ">
+        <aside className="w-1/2 h-full flex items-center justify-center">
           <div
-            className={`flex flex-col gap-3 overflow-auto max-h-screen  ${
+            className={`flex flex-col gap-3 overflow-auto max-h-screen flex-1 ${
               rooms.length > 0 ? 'pt-[100px]' : ''
             }`}
           >
             {rooms.length > 0 && rooms ? (
-              rooms.map(item => {
+              <div className='flex flex-col gap-4'>
+                <h1 className='mb-4 self-center text-2xl'>Salas disponiveis</h1>
+              {rooms.map(item => {
                 return <Card item={item} key={item.id} />
-              })
+              })}
+              </div>
             ) : (
               <>
                 <h2>Parece que nao a nenhuma sala criada!</h2>
